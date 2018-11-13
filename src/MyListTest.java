@@ -18,6 +18,7 @@ public class MyListTest {
         System.out.println(list.indexOf("4"));
         System.out.println(list.add("3"));
         list.print();
+        System.out.println(list.cloneLinked());
 
     }
 }

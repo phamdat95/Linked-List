@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MyList<E> {
     private Node<E> head = null;
     private Node<E> tail = null;
@@ -149,5 +151,14 @@ public class MyList<E> {
         if (i == size){
             System.out.println(current.element + "]");
         }
+    }
+        Object cloneLinked(){
+            Object elementArray[] = new Object[size];
+            Node<E> current = head;
+            for (int i = 0; i < elementArray.length; i++){
+                elementArray[i] = current.element;
+                current = current.next;
+            }
+            return Arrays.toString(elementArray);
     }
 }
